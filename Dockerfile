@@ -1,5 +1,5 @@
 FROM python:3.9-alpine3.13
-LABEL MAINTAINER="londonappdeveloper.com"
+LABEL maintainer="londonappdeveloper.com"
 
 # don't buffer the output, the output will be printed directly on the console
 # preventing delay the application, so able to see the log immidiately as they run
@@ -25,8 +25,6 @@ RUN python -m venv /py && \
         --disabled-password \
         --no-create-home \
         django-user
-        
-RUN pip install flake8
 
 ENV PATH="/py/bin:$PATH"
 
